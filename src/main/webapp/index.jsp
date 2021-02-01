@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Homepage - Start Bootstrap Template</title>
+    <title>Java Pet Supplies</title>
 
     <!-- Bootstrap core CSS -->
     <link href="views/styles/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -15,11 +15,8 @@
     <!-- Custom styles for this template -->
     <link href="views/styles/css/shop-homepage.css" rel="stylesheet">
 
-    <title>Pet Supplies</title>
 </head>
 <body>
-
-<a href="hello-servlet">Hello Servlet</a>
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -36,14 +33,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pet Supplies</a>
+                    <a class="nav-link" href="views/styles/WishList.jsp"> Wishlist </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link" href="login-servlet">Login</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
+
             </ul>
         </div>
     </div>
