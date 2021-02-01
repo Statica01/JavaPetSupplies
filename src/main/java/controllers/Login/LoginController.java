@@ -1,15 +1,20 @@
-package com.example.JavaPetSupplies;
+package controllers.Login;
 
-import java.io.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
-public class HelloServlet extends HttpServlet {
+@WebServlet(name = "loginServlet", value = "/login-servlet")
+public class LoginController extends HttpServlet {
+
+
     private String message;
 
     public void init() {
-        message = "Hello World!";
+        message = "Login work in progress";
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -25,3 +30,4 @@ public class HelloServlet extends HttpServlet {
     public void destroy() {
     }
 }
+
