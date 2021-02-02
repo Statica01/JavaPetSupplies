@@ -26,15 +26,15 @@
 <body>
 <div class = "wishList">
     <table class="table table-bordered table-striped" id="WishProducts">
-        <thead>
+        <thread>
         <tr>
             <th>Name</th>
             <th>Category</th>
             <th>Price</th>
         </tr>
-        </thead>
-        <tbody>
-        </tbody>
+        </thread>
+        <body>
+        </body>
     </table>
 </div>
 <!-- Placed at the end of the document so the pages load faster -->
