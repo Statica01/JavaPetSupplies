@@ -8,6 +8,7 @@ import domain.entities.shop.Catalog;
 import domain.entities.shop.Compartment;
 import domain.entities.shop.Product;
 import org.junit.jupiter.api.Test;
+//import org.junit.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -32,8 +33,8 @@ public class PetSuppliesTest {
     /**
      * When product is created, a catalog compartment is created
      */
-    @Test
-    void catalogCompartmentIsCreated() {
+    @org.junit.Test //Choose the correct annotation (not jupiter!)
+    public void catalogCompartmentIsCreated() {
         product = new Product("Berner Sennen Shampoo",
                 "A1",
                 99,
@@ -50,8 +51,8 @@ public class PetSuppliesTest {
     /**
      * Catalog can check for compartments by compartment id
      */
-    @Test
-    void compartmentCanBeFoundById() {
+    @org.junit.Test
+    public void compartmentCanBeFoundById() {
         product = new Product("Berner Sennen Shampoo",
                 "A1",
                 99,
@@ -77,8 +78,8 @@ public class PetSuppliesTest {
     /**
      * When compartment is created, it enters the catalog. The above refactored.
      */
-    @Test
-    void compartmentIsInCatalog() {
+    @org.junit.Test
+    public void compartmentIsInCatalog() {
         product = new Product("Berner Sennen Shampoo",
                 "A1",
                 99,
@@ -103,8 +104,8 @@ public class PetSuppliesTest {
     /**
      * When product is created, a catalog compartment is created automatically
      */
-    @Test
-    void catalogCompartmentIsCreatedAutomatically() {
+    @org.junit.Test
+    public void catalogCompartmentIsCreatedAutomatically() {
         //compartment = new Compartment(product);
         product = new Product("Berner Sennen Shampoo",
                 "A1",
@@ -123,8 +124,8 @@ public class PetSuppliesTest {
     /**
      * When product is created, compartment is stored in catalog
      */
-    @Test
-    void catalogCompartmentIsStored() {
+    @org.junit.Test
+    public void catalogCompartmentIsStored() {
         product = new Product("St Bernhard Shampoo",
                 "A2",
                 89,
@@ -140,8 +141,8 @@ public class PetSuppliesTest {
     /**
      * Price is saved in private var
      */
-    @Test
-    void priceIsSaved() {
+    @org.junit.Test
+    public void priceIsSaved() {
         product = new Product("Leonberger Shampoo",
                 "A3",
                 79,
@@ -156,8 +157,8 @@ public class PetSuppliesTest {
     /**
      * When product is created, catalog total size is increased
      */
-    @Test
-    void productIsSavedInCatalog() {
+    @org.junit.Test
+    public void productIsSavedInCatalog() {
         //product.enterCatalog(catalog);
         product = new Product("St Bernhard Shampoo",
                 "A2",
@@ -173,8 +174,8 @@ public class PetSuppliesTest {
     /**
      * There should be only one compartment per model nr
      */
-    @Test
-    void onlyOneCompartmentPerModelNr() {
+    @org.junit.Test
+    public void onlyOneCompartmentPerModelNr() {
         product = new Product("St Bernhard Shampoo",
                 "A2",
                 89,
@@ -207,8 +208,8 @@ public class PetSuppliesTest {
     /**
      * multiple products are entered and compartments are created accordingly
      */
-    @Test
-    void nrOfCompartmentsAreCorrectAfterProductsAreCreated() {
+    @org.junit.Test
+    public void nrOfCompartmentsAreCorrectAfterProductsAreCreated() {
         enterProducts();
         for(Compartment c : catalog.getCompartments()) {
             System.out.println("title:" + c.getId());
@@ -219,8 +220,8 @@ public class PetSuppliesTest {
     /**
      * multiple products are entered and compartment sizes are correct
      */
-    @Test
-    void compartmentSizesAreCorrect() {
+    @org.junit.Test
+    public void compartmentSizesAreCorrect() {
         enterProducts();
         for(Compartment c : catalog.getCompartments()) {
             System.out.println("title:" + c.getId());
@@ -233,7 +234,7 @@ public class PetSuppliesTest {
 
     @ParameterizedTest
     @ValueSource(ints = { 0,1 })
-    void sizesAreCorrect(int n) {
+    public void sizesAreCorrect(int n) {
         enterProducts();
         compartment = catalog.getCompartmentByCompartmentId("A1");
 //        System.out.println("id:" + compartment.getId() + ", string:" + s);
@@ -246,7 +247,7 @@ public class PetSuppliesTest {
 
     //------------------------------------------------------------//
 
-    void enterProducts() {
+    public void enterProducts() {
         for(int i=0; i<2; i++) { //2 products are created
             product = new Product("Berner Sennen Shampoo",
                     "A1",
