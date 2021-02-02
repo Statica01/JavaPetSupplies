@@ -8,6 +8,8 @@ import domain.entities.shop.Catalog;
 import domain.entities.shop.Compartment;
 import domain.entities.shop.Product;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.ArrayList;
 
@@ -228,6 +230,19 @@ public class PetSuppliesTest {
         }
         assertEquals(catalog.getCompartmentByCompartmentId("A2").getItems().size(),3);
     }
+
+    @ParameterizedTest
+    @ValueSource(ints = { 0,1 })
+    void sizesAreCorrect(int n) {
+        enterProducts();
+        compartment = catalog.getCompartmentByCompartmentId("A1");
+//        System.out.println("id:" + compartment.getId() + ", string:" + s);
+//        compartment = catalog.getCompartmentByCompartmentId(s);
+//        System.out.println("id:" + compartment.getId());
+//        System.out.println("size:" + compartment.getItems().size());
+        assertTrue(compartment.getItems().size() > n);
+    }
+
 
     //------------------------------------------------------------//
 
