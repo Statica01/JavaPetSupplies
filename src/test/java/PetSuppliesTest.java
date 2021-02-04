@@ -7,6 +7,7 @@ import MVT2021.Product;*/
 import domain.entities.shop.Catalog;
 import domain.entities.shop.Compartment;
 import domain.entities.shop.Product;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 //import org.junit.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@DisplayName("Pet Supplies Test")
 public class PetSuppliesTest {
 
     private Product product;
@@ -51,7 +53,8 @@ public class PetSuppliesTest {
     /**
      * Catalog can check for compartments by compartment id
      */
-    @org.junit.Test
+    @Test //To be run in the test suite of JUnit 4 type, the old test annotation has to be used.
+    @DisplayName(value="compartment can be found by id")
     public void compartmentCanBeFoundById() {
         product = new Product("Berner Sennen Shampoo",
                 "A1",
@@ -234,6 +237,7 @@ public class PetSuppliesTest {
 
     @ParameterizedTest
     @ValueSource(ints = { 0,1 })
+    @DisplayName("Sizes are correct...")
     public void sizesAreCorrect(int n) {
         enterProducts();
         compartment = catalog.getCompartmentByCompartmentId("A1");

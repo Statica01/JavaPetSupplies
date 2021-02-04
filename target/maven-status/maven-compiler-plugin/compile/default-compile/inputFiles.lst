@@ -1,6 +1,9 @@
-/Users/magnusjohansson/Applications/JavaPetSupplies/src/main/java/com/example/JavaPetSupplies/HelloServlet.java
+/Users/magnusjohansson/Applications/JavaPetSupplies/src/main/java/controllers/wishlist/wishListController.java
 /Users/magnusjohansson/Applications/JavaPetSupplies/src/main/java/domain/entities/shop/Product.java
+/Users/magnusjohansson/Applications/JavaPetSupplies/src/main/java/controllers/Login/LoginController.java
 /Users/magnusjohansson/Applications/JavaPetSupplies/src/main/java/domain/entities/shop/Catalog.java
+/Users/magnusjohansson/Applications/JavaPetSupplies/src/main/java/dbData/DbDataContext.java
 /Users/magnusjohansson/Applications/JavaPetSupplies/src/main/java/domain/entities/shop/Compartment.java
+/Users/magnusjohansson/Applications/JavaPetSupplies/src/main/java/MainStartup.java
 /Users/magnusjohansson/Applications/JavaPetSupplies/src/main/java/domain/entities/wishList/WishList.java
 /Users/magnusjohansson/Applications/JavaPetSupplies/src/main/java/domain/entities/customer/Customer.java
