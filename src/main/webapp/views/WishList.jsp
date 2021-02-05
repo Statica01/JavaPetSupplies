@@ -16,25 +16,25 @@
     <title>Java Pet Supplies</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/shop-homepage.css" rel="stylesheet">
+    <link href="styles/css/shop-homepage.css" rel="stylesheet">
 
     <title>Pet Supplies</title>
 </head>
 <body>
 <div class = "wishList">
     <table class="table table-bordered table-striped" id="WishProducts">
-        <thread>
+        <thead>
         <tr>
             <th>Name</th>
             <th>Category</th>
             <th>Price</th>
         </tr>
-        </thread>
-        <body>
-        </body>
+        </thead>
+        <tbody>
+        </tbody>
     </table>
 </div>
 <!-- Placed at the end of the document so the pages load faster -->
