@@ -1,6 +1,7 @@
 package domain.entities.customer;
 
 import domain.entities.wishList.*;
+//import jdk.internal.jimage.ImageReader;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,47 +11,48 @@ import java.util.ArrayList;
 
 @Entity
 public class Customer {
+    //public ImageReader.Node getWishLists;
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
-    private String UserName;
-    private String Password;
-    private int CustomerId;
-    private static int CustomerNumber = 0;
+    private String userName;
+    private String password;
+    private int customerId;
+    private static int customerNumber = 1;
     private ArrayList<WishList> wishLists;
     private WishList wishList;
 
     public Customer(String name, String pass) {
 
-        UserName = name;
-        Password = pass;
-        CustomerId = CustomerNumber;
-        CustomerNumber++;
+        userName = name;
+        password = pass;
+        customerId = customerNumber;
+        customerNumber++;
         wishLists = new ArrayList<>();
     }
 
-    public void setUserName(String userName) {
-        UserName = userName;
+    public void setUserName(String name) {
+        userName = name;
     }
 
     public String getUserName() {
-        return UserName;
+        return userName;
     }
 
-    public void setPassword(String password) {
-        Password = password;
+    public void setPassword(String pass) {
+        password = pass;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
-    public void setCustomerNumber(int customerNumber) {
+/*    public void setCustomerId(int customerNumber) {
         CustomerNumber = customerNumber;
-    }
+    }*/
 
-    public int getCustomerNumber() {
-        return CustomerNumber;
+    public int getCustomerId() {
+        return customerId;
     }
 
     public WishList getWishList(int id) {
@@ -63,4 +65,17 @@ public class Customer {
 
         return wishList;
     }
+
+    public ArrayList<WishList> getWishLists() {
+        return wishLists;
+    }
+
+    public void addWishList() {
+        wishList = new WishList(customerId);
+        wishLists.add(wishList);
+    }
+
+/*    public WishList getWishList(int id) {
+
+    }*/
 }
