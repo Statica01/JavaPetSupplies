@@ -1,40 +1,65 @@
 package domain.entities.wishList;
+import domain.entities.shop.Product;
+//import jdk.internal.jimage.ImageReader;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.ArrayList;
 
 @Entity
 public class WishList {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    public int Id;
-    private String SelectedProducts;
+    public int id;
+    //public ImageReader.Node getSelectedProducts;
+    private ArrayList<String> selectedProducts;
+    private static int idNr = 0;
+    private int customerNumber;
+    private String productId;
 
-    private String CustomerNumber;
-    private String ProductId;
+    public WishList(int c) {
 
-    public void setSelectedProducts(String selectedProducts) {
-        SelectedProducts = selectedProducts;
+        selectedProducts = new ArrayList<>();
+        customerNumber = c;
+        id = idNr;
+        idNr++;
     }
 
-    public String getSelectedProducts() {
-        return SelectedProducts;
+    public void addProduct(Product product) {
+        selectedProducts.add(product.getModelNr());
     }
 
-    public void setCustomerNumber(String customerNumber) {
-        CustomerNumber = customerNumber;
+    public ArrayList<String> getSelectedProducts() {
+        return this.selectedProducts;
     }
 
-    public String getCustomerNumber() {
-        return CustomerNumber;
+    public void setCustomerNumber(int customerNumber) {
+        customerNumber = customerNumber;
+    }
+
+    public int getCustomerNumber() {
+        return customerNumber;
     }
 
     public void setProductId(String productId) {
-        ProductId = productId;
+        productId = productId;
     }
 
     public String getProductId() {
-        return ProductId;
+        return productId;
+    }
+
+    public int getId() { return id; }
+
+    public void removeProduct(Product product) {
+        productId = product.getModelNr();
+        for(int i = 0; i < selectedProducts.size(); i++) {
+            if(selectedProducts.get(i) == productId) {
+                selectedProducts.remove(i);
+                break; //in case there are many, only one instance should be removed
+            }
+        }
     }
 }

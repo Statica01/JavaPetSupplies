@@ -6,17 +6,27 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.ArrayList;
 
 @Entity
 public class Customer {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private int Id;
+    private int id;
     private String UserName;
     private String Password;
-    private String CustomerNumber;
+    private int CustomerId;
+    private static int CustomerNumber = 0;
+    private ArrayList<WishList> wishLists;
+    private WishList wishList;
 
-    public Customer() {
+    public Customer(String name, String pass) {
+
+        UserName = name;
+        Password = pass;
+        CustomerId = CustomerNumber;
+        CustomerNumber++;
+        wishLists = new ArrayList<>();
     }
 
     public void setUserName(String userName) {
@@ -35,11 +45,22 @@ public class Customer {
         return Password;
     }
 
-    public void setCustomerNumber(String customerNumber) {
+    public void setCustomerNumber(int customerNumber) {
         CustomerNumber = customerNumber;
     }
 
-    public String getCustomerNumber() {
+    public int getCustomerNumber() {
         return CustomerNumber;
+    }
+
+    public WishList getWishList(int id) {
+
+        for(WishList l : wishLists) {
+            if(l.getId() == id) {
+                wishList = l;
+            }
+        }
+
+        return wishList;
     }
 }

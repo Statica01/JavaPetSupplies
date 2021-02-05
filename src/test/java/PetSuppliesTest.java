@@ -7,6 +7,7 @@ import MVT2021.Product;*/
 import domain.entities.shop.Catalog;
 import domain.entities.shop.Compartment;
 import domain.entities.shop.Product;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 //import org.junit.Test;
@@ -81,7 +82,8 @@ public class PetSuppliesTest {
     /**
      * When compartment is created, it enters the catalog. The above refactored.
      */
-    @org.junit.Test
+    @Test
+    @Disabled("disabled: compartment is in catalog") //works with the correct test tag
     public void compartmentIsInCatalog() {
         product = new Product("Berner Sennen Shampoo",
                 "A1",
