@@ -16,10 +16,10 @@
     <title>Java Pet Supplies</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/shop-homepage.css" rel="stylesheet">
+    <link href="styles/css/shop-homepage.css" rel="stylesheet">
 
     <title>Pet Supplies</title>
 </head>
