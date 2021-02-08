@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -34,6 +35,9 @@
         </tr>
         </thead>
         <tbody>
+        <tr>
+            <td> ${message} </td>
+        </tr>
         </tbody>
     </table>
 </div>

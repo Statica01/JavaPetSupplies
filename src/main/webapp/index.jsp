@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Java Pet Supplies</title>
+    <title>Java Pet Supplies</title><h>Brattpets 2.0</h>
 
     <!-- Bootstrap core CSS -->
     <link href="views/styles/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -166,7 +166,7 @@
                                 aspernatur!</p>
                         </div>
                         <div class="card-footer">
-                            <a href="#link" type="button" class="btn btn-secondary btn-sm" role="button">Add to Wishlist</a>
+                            <a href="wishlist-servlet?name=Shampoo" type="button" class="btn btn-secondary btn-sm" role="button">Add to Wishlist</a>
                         </div>
                     </div>
                 </div>

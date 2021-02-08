@@ -11,11 +11,11 @@ import java.io.PrintWriter;
 public class LoginController extends HttpServlet {
 
 
-    private String message;
+    //private String message;
 
-    public void init() {
+/*    public void init() {
         message = "Login work in progress";
-    }
+    }*/
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
@@ -23,8 +23,16 @@ public class LoginController extends HttpServlet {
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
+        out.println("<h1>" + "title is:" + "</h1>");
         out.println("</body></html>");
+
+
+        //PrintWriter out = response.getWriter();
+        out.append(request.getParameter("title"));
+    }
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        doGet(request,response);
     }
 
     public void destroy() {
