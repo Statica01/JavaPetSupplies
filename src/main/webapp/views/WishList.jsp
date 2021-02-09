@@ -5,7 +5,11 @@
   Time: 13:52
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="controllers.*" %>
+<%@ page import="domain.entities.shop.Product" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page isELIgnored="false"%>
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -35,8 +39,11 @@
         </tr>
         </thead>
         <tbody>
+        <% Product p = (Product)request.getAttribute("product"); %>
         <tr>
-            <td> ${message} </td>
+            <td>
+            <%= p.getProductName() %>
+            </td>
         </tr>
         </tbody>
     </table>

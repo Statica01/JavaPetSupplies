@@ -39,8 +39,9 @@ public class wishListController extends HttpServlet{
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         //doGet(request,response);
 
+        String name = request.getParameter("name");
         Catalog catalog = new Catalog();
-        Product product = new Product(request.getParameter("name"),
+        Product product = new Product(name,
                 "A1",
                 99,
                 "B1",
@@ -51,9 +52,10 @@ public class wishListController extends HttpServlet{
 
         WishList wishList = new WishList(1); //Customer no 1
         wishList.addProduct(product);
+        //String name = product.getProductName();
 
-        request.setAttribute("message", product.getProductName());
-        RequestDispatcher dispatcher = request.getRequestDispatcher("WishList.jsp");
+        request.setAttribute("product", product);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("views/WishList.jsp"); /*what path?*/
         dispatcher.forward(request, response);
     }
 
