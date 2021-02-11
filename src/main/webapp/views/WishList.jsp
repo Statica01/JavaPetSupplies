@@ -42,7 +42,7 @@
         <% out.print("product: "); Product p = (Product)request.getAttribute("product"); %>
         <tr>
             <td>
-            <% out.print(p.getProductName()); %>
+            <%  %>
             </td>
         </tr>
         </tbody>
