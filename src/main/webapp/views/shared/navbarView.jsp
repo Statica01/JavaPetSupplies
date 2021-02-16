@@ -13,7 +13,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="views/WishList.jsp"> Wishlist </a>
+                    <a class="nav-link" href="wishlist-servlet"> Wishlist </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login-servlet">Login</a>

@@ -166,7 +166,7 @@
                                 aspernatur!</p>
                         </div>
                         <div class="card-footer">
-                            <a href="wishlist-servlet?name=Shampoo" type="button" class="btn btn-secondary btn-sm" role="button">Add to Wishlist</a>
+                            <a href="wishlist-servlet" type="button" class="btn btn-secondary btn-sm" role="button">Add to Wishlist</a>
                         </div>
                     </div>
                 </div>

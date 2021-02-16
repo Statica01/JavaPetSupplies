@@ -39,10 +39,13 @@
         </tr>
         </thead>
         <tbody>
-        <% out.print("product: "); Product p = (Product)request.getAttribute("product"); %>
+        <% out.print("the product: ");
+            Product p = (Product)request.getSession().getAttribute("name");
+
+        %>
         <tr>
             <td>
-            <% out.print(p.getProductName()); %>
+                <%= p.getProductName() %>
             </td>
         </tr>
         </tbody>

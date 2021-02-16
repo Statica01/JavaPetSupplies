@@ -19,16 +19,15 @@ public class LoginController extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
-
+        String name = request.getParameter("name");
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>" + "title is:" + "</h1>");
+        out.println("<h1>" + "title is: hi" + name + "</h1>");
         out.println("</body></html>");
 
 
-        //PrintWriter out = response.getWriter();
-        out.append(request.getParameter("title"));
+        response.getWriter().append(request.getParameter("title"));
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
