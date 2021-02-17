@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: C
@@ -6,7 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page import="controllers.*" %>
-<%@ page import="domain.entities.shop.Product" %>
+<%@ page import="domain.entities.shop.*" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page isELIgnored="false"%>
 <!DOCTYPE html>
@@ -39,15 +40,15 @@
         </tr>
         </thead>
         <tbody>
-        <% out.print("the product: ");
-            Product p = (Product)request.getSession().getAttribute("name");
+        <c:forEach items="${wishList}" var="wishList">
 
-        %>
         <tr>
             <td>
-                <%= p.getProductName() %>
+          ${wishList.productName}
             </td>
+            <td>${wishList.productId}</td>
         </tr>
+        </c:forEach>
         </tbody>
     </table>
 </div>

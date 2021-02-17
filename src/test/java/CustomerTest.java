@@ -1,6 +1,5 @@
-import domain.entities.customer.Customer;
-//import domain.entities.shop.CustomerBank;
-import org.junit.Test;
+/* import domain.entities.customer.Customer;
+import domain.entities.shop.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -33,19 +32,19 @@ public class CustomerTest {
 
     /**
      * When multiple customers are created, the static int id is incremented properly
-     */
+     *//*
     @org.junit.jupiter.api.Test
     public void staticVarIsUpdatedCorrectly() {
         customer = domain.entities.shop.CustomerBank.getCustomerByName("Carita");
         assertEquals(customer.getCustomerId(),3);
-    }
+    }*/
 
     /**
      * Wish list array is empty
-     */
+     *//*
     @org.junit.jupiter.api.Test
     public void wishListArrayIsEmpty() {
         customer.addWishList();
         assertTrue(customer.getWishLists().size() == 1);
     }
-}
+}*/

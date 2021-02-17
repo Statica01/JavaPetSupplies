@@ -1,8 +1,9 @@
-package domain.entities.shop;
+/*package domain.entities.shop;
 
+import javax.servlet.http.HttpServlet;
 import java.util.ArrayList;
 
-public class Compartment {
+public class Compartment extends HttpServlet {
 
     private String id;
     private ArrayList<Product> items = new ArrayList<>();
@@ -33,4 +34,4 @@ public class Compartment {
     public void addItem(Product product) {
         this.items.add(product);
     }
-}
+}*/

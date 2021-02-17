@@ -2,10 +2,11 @@ package domain.entities.shop;
 
 //import MVT2021.Compartment;
 //import MVT2021.Product;
-
+/*
+import javax.servlet.http.HttpServlet;
 import java.util.ArrayList;
 
-public class Catalog {
+public class Catalog extends HttpServlet {
 
     private ArrayList<Compartment> compartments;
 
@@ -52,3 +53,4 @@ public class Catalog {
         return compartment;
     }
 }
+*/

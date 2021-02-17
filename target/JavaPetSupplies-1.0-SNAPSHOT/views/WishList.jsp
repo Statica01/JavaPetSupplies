@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: C
@@ -5,7 +6,12 @@
   Time: 13:52
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="controllers.*" %>
+<%@ page import="domain.entities.shop.*" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page isELIgnored="false"%>
+<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -34,6 +40,15 @@
         </tr>
         </thead>
         <tbody>
+        <c:forEach items="${wishList}" var="wishList">
+
+        <tr>
+            <td>
+          ${wishList.productName}
+            </td>
+            <td>${wishList.productId}</td>
+        </tr>
+        </c:forEach>
         </tbody>
     </table>
 </div>

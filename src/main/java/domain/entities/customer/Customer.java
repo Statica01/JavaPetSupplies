@@ -1,7 +1,8 @@
 package domain.entities.customer;
-
+/*
 import domain.entities.wishList.*;
-//import jdk.internal.jimage.ImageReader;
+import jdk.internal.jimage.ImageReader;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.ArrayList;
 
-@Entity
+
 public class Customer {
     //public ImageReader.Node getWishLists;
     @Id
@@ -47,9 +48,9 @@ public class Customer {
         return password;
     }
 
-/*    public void setCustomerId(int customerNumber) {
+   public void setCustomerId(int customerNumber) {
         CustomerNumber = customerNumber;
-    }*/
+    }
 
     public int getCustomerId() {
         return customerId;
@@ -75,7 +76,7 @@ public class Customer {
         wishLists.add(wishList);
     }
 
-/*    public WishList getWishList(int id) {
+  public WishList getWishList(int id) {
 
-    }*/
-}
+    }
+}*/

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <html>
@@ -166,7 +167,11 @@
                                 aspernatur!</p>
                         </div>
                         <div class="card-footer">
-                            <a href="wishlist-servlet" type="button" class="btn btn-secondary btn-sm" role="button">Add to Wishlist</a>
+                            <form action="${pageContext.request.contextPath}index.do" method="post">
+                                <input type="hidden" name="id" value="${nr}" />
+                                <input type="submit" class="btn btn-secondary btn-sm" value="Add to cart" />
+                            </form>
+                            <a href="wishlist-servlet?name=Shampoo" type="button" class="btn btn-secondary btn-sm" role="button">Add to Wishlist</a>
                         </div>
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -13,7 +14,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="wishlist-servlet"> Wishlist </a>
+                    <a class="nav-link" href="/wishList.do"> Wishlist </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login-servlet">Login</a>
