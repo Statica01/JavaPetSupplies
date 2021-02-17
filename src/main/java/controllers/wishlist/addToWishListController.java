@@ -31,6 +31,7 @@ public class addToWishListController extends HttpServlet{
         //doGet(request,response);
 
         String name = request.getParameter("name");
+        String productPrice = request.getParameter("productPrice");
         Product product = new Product(name,
                 "A1",
                 99,
@@ -40,7 +41,7 @@ public class addToWishListController extends HttpServlet{
 
         );
 
-        wishListService.addToWishList(new WishList(2, "productName"));
+        wishListService.addToWishList(new WishList(2, "productName", 99));
         response.sendRedirect("/wishList.do");
 
     }

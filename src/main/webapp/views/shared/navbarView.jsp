@@ -14,7 +14,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/wishList.do"> Wishlist </a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/wishList.do"> Wishlist </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login-servlet">Login</a>
