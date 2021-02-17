@@ -1,10 +1,11 @@
 package domain.entities.shop;
-
+/*
 import domain.entities.customer.Customer;
 
+import javax.servlet.http.HttpServlet;
 import java.util.ArrayList;
 
-public class CustomerBank {
+public class CustomerBank extends HttpServlet {
 
     public static ArrayList<Customer> customers = new ArrayList<>();
 
@@ -25,4 +26,4 @@ public class CustomerBank {
 
         return customer;
     }
-}
+}*/
