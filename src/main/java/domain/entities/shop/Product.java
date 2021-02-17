@@ -11,17 +11,17 @@ public class Product extends HttpServlet {
     private static int id = 1; //id should be unique
     private int productId;
     private String modelNr;
-    private int price;
+    private int productPrice;
     private String imgReference;
     private int category;
     private String description;
 
-    public Product(String name, String nr, int p, String imgRef, int cat, String descr ){
+    public Product(String name, String nr, int productPrice, String imgRef, int cat, String descr ){
 
         productName = name;
         setProductId();
         modelNr = nr;
-        price = p;
+        this.productPrice = productPrice;
         imgReference = imgRef;
         category = cat;
         description = descr;
@@ -53,12 +53,12 @@ public class Product extends HttpServlet {
         this.modelNr = modelNr;
     }
 
-    public int getPrice() {
-        return price;
+    public int getProductPrice() {
+        return productPrice;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setProductPrice(int productPrice) {
+        this.productPrice = productPrice;
     }
 
     public String getImgReference() {

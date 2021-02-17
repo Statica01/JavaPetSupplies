@@ -17,12 +17,14 @@ public class WishList {
     private String productName;
     public Product Product;
     public int productId;
+    public int productPrice;
 
 
-    public WishList(int productId, String productName) {
+    public WishList(int productId, String productName, int productPrice) {
 
         this.productId = productId;
         this.productName = productName;
+        this.productPrice = productPrice;
 
         /*selectedProducts = new ArrayList<>();
         customerNumber = c;
@@ -61,6 +63,10 @@ public class WishList {
     public void setProductName(String productName) {
         this.productName = productName;
     }
+
+    public int getProductPrice() { return productPrice; }
+
+    public void setProductPrice(int productPrice) { this.productPrice = productPrice; }
 
     public int getId() {
         return id;

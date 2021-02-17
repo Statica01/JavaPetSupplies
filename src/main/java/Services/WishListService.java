@@ -11,8 +11,8 @@ public class WishListService {
     private static List<WishList> selectedProducts = new ArrayList<WishList>();
 
 
-   static {
-       selectedProducts.add(new WishList(2, "ShampooDog"));
+   static {//static fake product added to wishlist
+       selectedProducts.add(new WishList(2, "ShampooDog", 99));
    }
 
    public void addToWishList(WishList wishList) {selectedProducts.add(wishList);}

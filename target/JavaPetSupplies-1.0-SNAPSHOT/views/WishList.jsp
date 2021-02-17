@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%--
   Created by IntelliJ IDEA.
   User: C
@@ -6,10 +7,7 @@
   Time: 13:52
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="controllers.*" %>
-<%@ page import="domain.entities.shop.*" %>
-<%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page isELIgnored="false"%>
+
 <!DOCTYPE html>
 
 <html>
@@ -19,42 +17,63 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Java Pet Supplies</title>
+    <title>Java Pet Supplies</title><h>Brattpets 2.0</h>
 
     <!-- Bootstrap core CSS -->
-    <link href="styles/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="views/styles/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="styles/css/shop-homepage.css" rel="stylesheet">
+    <link href="views/styles/css/shop-homepage.css" rel="stylesheet">
 
-    <title>Pet Supplies</title>
 </head>
 <body>
-<div class = "wishList">
+<jsp:include page="shared/navbarView.jsp"/>
+<div class="wishList">
     <table class="table table-bordered table-striped" id="WishProducts">
         <thead>
         <tr>
+            <th>Product Id</th>
+            <th></th>
             <th>Name</th>
+            <th></th>
             <th>Category</th>
+            <td></td>
             <th>Price</th>
         </tr>
         </thead>
         <tbody>
+
         <c:forEach items="${wishList}" var="wishList">
 
-        <tr>
-            <td>
-          ${wishList.productName}
-            </td>
-            <td>${wishList.productId}</td>
-        </tr>
+            <tr>
+                <td>
+                        ${wishList.productId}
+                </td>
+                <td></td>
+                <td>
+                        ${wishList.productName}
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                        ${wishList.productPrice}
+                </td>
+
+            </tr>
         </c:forEach>
         </tbody>
     </table>
 </div>
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
-<script src="//ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/bootstrap.min.js"></script>
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white"></p>
+    </div>
+    <!-- /.container -->
+</footer>
 
+<!-- Bootstrap core JavaScript -->
+<script src="styles/vendor/jquery/jquery.min.js"></script>
+<script src="styles/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
